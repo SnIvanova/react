@@ -3,8 +3,6 @@ import React from "react";
 
 export default function ImageComponent (props) {
     return (
-        <img>
          <img src={props.src} alt={props.alt} />
-        </img>
         )
     };
