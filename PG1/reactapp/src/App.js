@@ -3,27 +3,27 @@ import './App.css';
 import ButtonComponent from './components/ButtonComponent';
 import ImageComponent from './components/ImageComponent';
 
+
+
 function App() {
+  
+
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+
+        <div className="App-pic"><ImageComponent src="https://images.pexels.com/photos/675920/pexels-photo-675920.jpeg?cs=srgb&dl=pexels-min-an-675920.jpg&fm=jpg" alt="image of the girl that looking down"  /> 
+        </div>
         <ButtonComponent text="Click me" />
-        <ImageComponent src="https://www.pexels.com/photo/woman-sitting-alone-in-an-auditorium-seat-19140226/" alt="image of the girl that looking down" />
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <p> </p>
+
       </header>
     </div>
   );
 }
 
 export default App;
+
+

@@ -1,8 +1,12 @@
 //Crea un nuovo componente come classe, chiamalo ImageComponent: dovrebbe ritornare un tag ‘img’. La fonte dell’immagine ‘src’ oltre che l’attributo ‘alt’ dovrebbero essere passate tramite Props del componente e assegnate al tag  <img /> .
-import React from "react";
+import { Component } from "react";
 
-export default function ImageComponent (props) {
+class ImageComponent extends Component {
+  render() {
     return (
-         <img src={props.src} alt={props.alt} />
-        )
-    };
+      <img src={this.props.src} alt={this.props.alt} className="small-image"/>
+    );
+  }
+}
+
+export default ImageComponent;
