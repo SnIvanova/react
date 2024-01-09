@@ -1,3 +1,17 @@
+input {
+  font-size: medium;
+  text-align: center;
+  height: 35px;
+  width: 50%;
+  border-radius: 8px;
+}
+
+button {
+border-radius: 8px;
+width: 8em;
+height: 4em;
+
+}
 .App {
   text-align: center;
 }

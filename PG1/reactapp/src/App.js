@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import ButtonComponent from './components/ButtonComponent';
 import ImageComponent from './components/ImageComponent';
-
+import DynamicButton from './components/DynamicButton';
 
 
 function App() {
@@ -17,6 +17,7 @@ function App() {
         <div className="App-pic"><ImageComponent src="https://images.pexels.com/photos/675920/pexels-photo-675920.jpeg?cs=srgb&dl=pexels-min-an-675920.jpg&fm=jpg" alt="image of the girl that looking down"  /> 
         </div>
         <ButtonComponent text="Click me" />
+        <DynamicButton />
         <p> </p>
 
       </header>
