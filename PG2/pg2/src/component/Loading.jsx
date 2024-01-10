@@ -1,7 +1,7 @@
 import React from 'react'
-import Spinner from 'react-bootstrap/Spinner'
+import { Button, Spinner } from 'react-bootstrap';
 
-function Loading() {
+export default function Loading() {
   return (
     <Button variant="primary" disabled>
     <Spinner
@@ -15,5 +15,3 @@ function Loading() {
   </Button>
   )
 }
-
-export default Loading

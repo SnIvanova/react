@@ -9,9 +9,7 @@ const AddComment = ({ addComment, book }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Call the addComment function passed from the parent component
     addComment(newComment);
-    // Clear the form fields after submitting
     setNewComment({ comment: '', rate: '', elementId: book.asin });
   };
 

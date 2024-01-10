@@ -24,9 +24,9 @@ const SingleBook = ({ book }) => {
     <Card.Body>
       <Card.Title>{book.title}</Card.Title>
     </Card.Body>
-    {selected && <CommentArea book={book} />}
+    
   </Card>
-   
+   {selected && <CommentArea book={book} />}
    </div>
   );
 };
