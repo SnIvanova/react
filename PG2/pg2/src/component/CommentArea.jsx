@@ -11,7 +11,7 @@ const CommentArea = ({ book }) => {
     try {
       setLoading(true);
 
-      await new Promise((resolve) => setTimeout(resolve, 2000));
+      await new Promise((resolve) => setTimeout(resolve, 500));
 
       const response = await fetch(
         `https://striveschool-api.herokuapp.com/api/comments/${book.asin}`,

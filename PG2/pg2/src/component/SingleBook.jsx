@@ -23,10 +23,12 @@ const SingleBook = ({ book }) => {
     <Card.Img variant="top" src={book.img} alt={`Cover of ${book.title}`} />
     <Card.Body>
       <Card.Title>{book.title}</Card.Title>
+      <Card.Text>{book.text}</Card.Text>
+      <Card.Text>{selected && <CommentArea book={book} />}</Card.Text>
     </Card.Body>
     
   </Card>
-   {selected && <CommentArea book={book} />}
+   
    </div>
   );
 };
