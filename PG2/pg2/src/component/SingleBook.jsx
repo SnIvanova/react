@@ -1,7 +1,15 @@
 import React, { useState } from 'react';
 import { Card, Col } from 'react-bootstrap';
 
-const SingleBook = ({ book, onBookSelect }) => {
+/* const SingleBook = ({ book, selectedBook, onBookSelect }) => {
+  const isSelected = selectedBook && selectedBook.asin === book.asin;
+
+  const toggleSelected = () => {
+    onBookSelect(isSelected ? null : book);
+  }; */
+
+
+const SingleBook = ({ book,  onBookSelect }) => {
   const [selected, setSelected] = useState(false);
 
   const toggleSelected = () => {
