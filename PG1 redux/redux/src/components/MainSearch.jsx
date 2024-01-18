@@ -3,7 +3,7 @@ import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import Job from "./Job";
 import axios from "axios";
-import { setSearchResults } from "./path-to-reducers/searchResultsSlice";
+import { setSearchResults } from "../redux/slice/searchResultsSlice";
 
 const MainSearch = () => {
   const [query, setQuery] = useState("");
