@@ -2,10 +2,13 @@ import { useState } from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import Job from "./Job";
+import axios from "axios";
+import { setSearchResults } from "./path-to-reducers/searchResultsSlice";
 
 const MainSearch = () => {
   const [query, setQuery] = useState("");
   const [jobs, setJobs] = useState([]);
+
 
   const navigate = useNavigate();
 
@@ -15,19 +18,19 @@ const MainSearch = () => {
     setQuery(e.target.value);
   };
 
-  const handleSubmit = async e => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      const response = await fetch(baseEndpoint + query + "&limit=20");
-      if (response.ok) {
-        const { data } = await response.json();
+      const response = await axios.get(baseEndpoint + query + "&limit=20");
+      if (response.status === 200) {
+        const { data } = response.data;
         setJobs(data);
       } else {
         alert("Error fetching results");
       }
     } catch (error) {
-      console.log(error);
+      console.error("Error fetching results", error);
     }
   };
 

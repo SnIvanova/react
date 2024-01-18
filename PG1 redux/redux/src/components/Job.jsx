@@ -2,6 +2,7 @@ import { Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { Star, StarFill } from "react-bootstrap-icons";
 import { useSelector, useDispatch } from "react-redux";
+import { addToFavorites, removeFromFavorites } from "./path-to-reducers/favoritesSlice";
 
 const Job = ({ data }) => {
   const favourites = useSelector(state => state.favourite.list);
@@ -18,10 +19,7 @@ const Job = ({ data }) => {
             size={22}
             className="me-2 my-auto"
             onClick={() =>
-              dispatch({
-                type: "REMOVE_FROM_FAVOURITE",
-                payload: data.company_name
-              })
+              dispatch(addToFavorites(data.company_name))
             }
           />
         ) : (
